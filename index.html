@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module">
+    import button from './js/button/button.js';
+    import snackbar from './js/snackbar/index.js';
+
+    const app = document.getElementById('app');
+    const hButtons = document.getElementsByTagName('h-button');
+
+    const firstButton = hButtons['first-button'];
+
+    firstButton.addEventListener('click', () => snackbar.addNotification('Nuevo mensaje'));
+
+    const secondButton = hButtons['second-button'];
+    secondButton.addEventListener('click', () => snackbar.addNotification('Nuevo error'));
+
+    const aboutUsButton = hButtons['aboutUs'];
+    aboutUsButton.addEventListener('click', () => location.assign('/aboutUs.html'))
+  </script>
+</head>
+<body>
+  <header>
+    <h1>
+      This is a test of Hybrid
+    </h1>
+    <h2>
+      Here I will add some button to deploy functionalities
+      created in Hybrid. Please click the buttons
+    </h2>
+  </header>
+  <nav>
+    <h-button id="aboutUs">
+      Go to About Us
+    </h-button>
+  </nav>
+  <br>
+  <main id="app">
+    <h-button id="first-button">
+      Create new Message
+    </h-button>
+    
+    <h-button id="second-button">
+      Create new error
+    </h-button>
+  </main>
+</body>
+</html>

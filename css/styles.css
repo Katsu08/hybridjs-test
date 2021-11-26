@@ -1,0 +1,15 @@
+:root {
+  --primary: rgb(45, 225, 252);
+  --secondary: rgb(42, 252, 152);
+  --malachite: rgb(9, 232, 94);
+  --emerald: rgb(22, 193, 114);
+  --deep-jungle: rgb(33, 79, 75);
+}
+
+h1, h2 {
+  color: var(--deep-jungle);
+}
+
+body {
+  background-color: var(--emerald)
+}
